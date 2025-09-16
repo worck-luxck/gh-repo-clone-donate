@@ -1,0 +1,10 @@
+jobs:
+  build-matrix:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node-version: [14, 16]
+      include:
+        - os: macos-latest # Adds a new OS, not in the original list
+          node-version: 18
+        - node-version: 17 # Adds a new version for an existing OS
